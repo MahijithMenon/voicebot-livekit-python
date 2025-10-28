@@ -35,8 +35,11 @@ async def entrypoint(ctx: agents.JobContext):
         model="gemini-2.0-flash-exp",
     ),
         tts=cartesia.TTS(model="sonic-2", voice="f786b574-daa5-4673-aa0c-cbe3e8534c02"),
-        vad=silero.VAD.load(),
-        turn_detection=MultilingualModel(),
+        vad=None,
+        turn_detection=None,
+
+        # vad=silero.VAD.load(),
+        # turn_detection=MultilingualModel(),
     )
 
     await session.start(
