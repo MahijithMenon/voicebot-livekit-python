@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expose any needed port (optional)
 EXPOSE 8000
 
-RUN python main.py download-files
+RUN python app.py download-files
 
 # Default command to run the app
 CMD ["python", "app.py", "start"]
